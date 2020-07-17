@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "MDN Nitgitter",
+  "version": "1.0",
+
+  "description": "Makes it easy to nitpick on MDN content in git",
+
+  "icons": {
+    "48": "icons/favicon48.png",
+    "96": "icons/favicon96.png",
+    "144": "icons/favicon144.png"
+  },
+
+  "permissions": [
+    "https://api.github.com/*"
+  ],
+
+
+  "content_scripts": [
+    {
+      "matches": ["https://developer.mozilla.org/*", "http://localhost/*"],
+      "js": ["src/index.js"]
+    }
+  ]
+}
